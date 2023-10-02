@@ -27,6 +27,7 @@
 
 .name {
     font-size: 40px;
+    font-weight: 600;
     margin: 10px;
 }
 
@@ -42,4 +43,34 @@
     font-weight: 400;
     color: #959595;
     margin: 10px;
+}
+
+.stats {
+    display: flex;
+    padding-inline-start: 0;
+}
+
+.stats li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 200px;
+    padding: 20px 0;
+    border: 1px solid #000;
+    background-color: #e6eef4;
+}
+
+.stats li:not(:last-child) {
+    border-right: 1px solid rgb(24, 24, 24);
+}
+
+.label {
+    font-size: 25px;
+    color: grey;
+}
+
+.quantity {
+    font-size: 30px;
+    font-weight: 700;
 }

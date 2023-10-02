@@ -16,7 +16,7 @@ export default function Profile({ avatar, username, tag, location, stats }) {
 		<p className={css.location}>{location}</p>
 		</div>
 
-		<ul className="stats">
+		<ul className={css.stats}>
 			<StatListProfile stats={stats}/>
 		</ul>
 	</div> ) 
