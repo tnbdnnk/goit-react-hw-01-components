@@ -35,8 +35,8 @@ function StatListProfile({stats}) {
 	for (const key in stats) {
 		itemsStats.push(
 			<li key={key}>
-				<span className=''>{key}</span>
-				<span className=''>{stats[key]}</span>
+				<span className={css.label}>{key}</span>
+				<span className={css.quantity}>{stats[key]}</span>
 			</li>
 		)
 	}

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-// import clsx from 'clsx';
+import css from './FriendList.module.css';
+import clsx from 'clsx';
 
 export default function FriendList({ friends }) {
     return (
-        <ul>
+        <ul className={css.friendList}>
             {friends.map(item => (
                 <FriendItem
                     key={item.id}
@@ -12,7 +13,6 @@ export default function FriendList({ friends }) {
                     isOnline={item.isOnline}
                 />
             ))}
-            
         </ul>
     )
 }
@@ -27,10 +27,10 @@ FriendList.propTypes = {
 
 function FriendItem({ name, avatar, isOnline}) {
     return (
-        <li>
-            <span>{isOnline}</span>
-            <img src={avatar} alt="User avatar" width="48"/>
-            <p>{name}</p>
+        <li className={css.item}>
+            <span className={clsx(css.status, isOnline ? css.isOnline : css.isOfline)}>{isOnline}</span>
+            <img className={css.avatar} src={avatar} alt="User avatar" width="48"/>
+            <p className={css.name}>{name}</p>
         </li>
     )
 }
