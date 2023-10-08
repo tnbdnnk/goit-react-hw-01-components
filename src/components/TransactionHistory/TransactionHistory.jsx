@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import TransactionItem from './TransactionItem';
 import css from './TransactionHistory.module.css';
 
 export default function TransactionHistory({transactions}) {
@@ -35,20 +36,4 @@ TransactionHistory.propTypes = {
             currency: PropTypes.string.isRequired,
         })
     )
-}
-
-function TransactionItem({type, amount, currency}) {
-    return (
-        <tr>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-        </tr> 
-    )
-}
-
-TransactionItem.propTypes = {
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
 }
